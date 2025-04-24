@@ -83,7 +83,6 @@ class Plane:
         self.n = n.norm()
         self.m = m
 
-    #negative n or no???
     def intersect(self, ray):
         denominator = ray.d.dot(self.n)
         if denominator != 0: 
@@ -217,7 +216,7 @@ def main():
     
     ls = Light(Vec3(0, 1, 20), (255, 255, 255))
 
-    im.rtx('new_test2025_2', [sph, sph2, pl, pl2], ls)
+    im.rtx('output1', [sph, sph2, pl, pl2], ls)
     
 if __name__ == '__main__':
     main()
